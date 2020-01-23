@@ -1,5 +1,6 @@
 $(document).ready(function () {
   $("#favorites").submit(function () {
+    $("#hide").hide();
     var day = $("#day").val();
     var food = $("#food").val();
     var sport = $("#sport").val();
@@ -13,6 +14,9 @@ $(document).ready(function () {
     $("#favoriteList").append("<li>" + input[3] + "</li>");
 
     event.preventDefault();
+
+    $("#hide").show();
+    // $("#favoriteList").hide();
 
   });
   $("#iceCream").click(function () {
