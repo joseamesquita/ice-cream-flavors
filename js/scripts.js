@@ -1,9 +1,26 @@
-$(document).ready(function() {
-      var flavors = ["Strawberry", "Chocolate", "Vanilla", "Cherry", "Pineapple", "Oreo"];
-      flavors.forEach(function(flavor){
-        document.getElementById("flavs").innerHTML += flavor + "<br>";
-        // ("$li").append(flavor);
+$(document).ready(function () {
+  $("#favorites").submit(function () {
+    var day = $("#day").val();
+    var food = $("#food").val();
+    var sport = $("#sport").val();
+    var holiday = $("#holiday").val();
 
-      });
-       
+    var input = [day, food, sport, holiday];
+
+    $("#favoriteList").append("<li>" + input[0] + "</li>");
+    $("#favoriteList").append("<li>" + input[1] + "</li>");
+    $("#favoriteList").append("<li>" + input[2] + "</li>");
+    $("#favoriteList").append("<li>" + input[3] + "</li>");
+
+    event.preventDefault();
+
   });
+  $("#iceCream").click(function () {
+    var flavorss = ["strawberry", "vanilla", "chocolate", "oreo"];
+
+    for (var i = 0; i <= flavorss.length - 1; i++) {
+      $("#flavors").append("<li>" + flavorss[i].toUpperCase() + "</li>");
+    };
+  })
+
+});

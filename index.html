@@ -1,17 +1,44 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/jquery-3.4.1.js"></script>
-    <script src="js/scripts.js" ></script>
-    <title>Favorite Ice Cream</title>
-  </head>
-  <body>
-    <div class="container">
-    <h1>Favorite Ice Cream Flavors</h1>
-    <ul id=flavs></ul>
-  </div>
 
-  </body>
+<head>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/jquery-3.4.1.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Favorite Ice Cream</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Favorite Things</h1>
+    <form id="favorites">
+      <div class="form-group">
+        <label for="day">Favorite day of the week?</label>
+        <input type="text" class="form-control" id="day" placeholder="Enter a day of the week">
+      </div>
+      <div class="form-group">
+        <label for="food">Favorite food?</label>
+        <input type="text" class="form-control" id="food" placeholder="Enter favorite food">
+      </div>
+      <div class="form-group">
+        <label for="sport">Favorite sport?</label>
+        <input type="text" class="form-control" id="sport" placeholder="Enter favorite sport">
+      </div>
+      <div class="form-group">
+        <label for="holiday">Favorite holiday?</label>
+        <input type="text" class="form-control" id="holiday" placeholder="Enter favorite holiday">
+      </div>
+      <button type="submit" class="btn btn-md">Submit</button>
+    </form>
+    <div class="panel panel-default">
+      <p>Favorites:</p>
+      <ul id="favoriteList"></ul>
+    </div>
+    <h3>List of Ice Cream flavors:</h3>
+    <ul id="flavors"></ul>
+    <button type="button" class="btn btn-md" id="iceCream">View Ice Cream flavors</button>
+  </div>
+</body>
+
 </html>
